@@ -23,5 +23,5 @@ var EmailPass = goDotEnvVariable("EMAIL_PASSWORD")
 var EmailHost = goDotEnvVariable("EMAIL_HOST")
 var EmailPort, _ = strconv.Atoi(goDotEnvVariable("EMAIL_PORT"))
 
-var EmailsStoragePath = "storage/emails.json"
+var EmailsStoragePath = goDotEnvVariable("EMAIL_STORAGE_PATH")
 var BitcoinCoingateDomain = "https://api.coingate.com"

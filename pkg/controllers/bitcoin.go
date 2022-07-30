@@ -14,7 +14,7 @@ import (
 
 func Subscribe(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
-	var storage models.EmailHandler = &models.EmailJsonStorage{PathFile: "storage/emails.json"}
+	var storage models.EmailHandler = &models.EmailJsonStorage{PathFile: config.EmailsStoragePath}
 	addr, err := mail.ParseAddress(r.Form.Get("email"))
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)

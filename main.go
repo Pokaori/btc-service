@@ -12,5 +12,5 @@ func main() {
 	r := mux.NewRouter()
 	routes.RegisterBitcoinRoutes(r)
 	http.Handle("/", r)
-	log.Fatal(http.ListenAndServe("localhost:8000", r))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8000", r))
 }
